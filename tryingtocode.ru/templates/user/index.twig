@@ -1,0 +1,8 @@
+{% extends 'layout.twig' %}
+{% block title %}User{% endblock %}
+{% block content %}
+    <section class="profile">
+        <h1 class="profile-title">Hello, <span class="user-name">{{ user.login }}</span></h1>
+        <a href="/logout"><button class="logout colored-button">Logout</button></a>
+    </section>
+{% endblock %}

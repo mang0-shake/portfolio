@@ -1,0 +1,39 @@
+{% extends 'layout.twig' %}
+{% block title %}Good{% endblock %}
+{% block content %}
+    <div class="breadcrumbs">
+        <a href="/catalog" class="breadcrumb">Shop</a> / <a href="/catalog/{{ category.id }}" class="breadcrumb">{{ category.title }}</a> / <span
+                class="breadcrumb-cur">{{ good.book_name }}</span>
+    </div>
+    <section>
+        <div class="product-wrp">
+            <div class="img-wrp">
+                <img src="../../public/img/{{ good.pic }}" alt="good.name" class="product-img">
+            </div>
+            <div class="product-info-wrp">
+                <span class="product-name">{{ good.book_name }}</span>
+                <span class="product-author">{{ good.author }}</span>
+                <p class="product-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque facere illum
+                    molestiae ullam. Aliquid architecto, commodi corporis cumque debitis, delectus deleniti dicta dolor
+                    dolore dolorum ducimus eligendi eos error excepturi fugiat harum ipsa iusto laboriosam laborum
+                    laudantium quasi quidem quod reprehenderit sapiente sequi soluta suscipit tempora vero voluptate
+                    voluptatibus! Adipisci culpa deserunt et facere iure maxime nulla, odio odit, perferendis quas quia
+                    quis. Aliquam aperiam aspernatur, corporis cum cumque dignissimos expedita tenetur? Ipsa nemo,
+                    praesentium? Ab ducimus eveniet ex explicabo!</p>
+                <div class="product-buy-section">
+                    <span class="product-price">{{ good.price }} rub</span>
+                    <button class="product-buy-button colored-button" onclick="add({{ good.id }},{{ good.price }})">Buy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{#    <a href="/catalog">Каталог</a> / <a href="/catalog/{{ category.id }}">{{ category.title }}</a> / {{ good.name }}#}
+{#    <h3>{{ good.name }}</h3>#}
+{#    <div>#}
+{#        <img style="width: 400px" src="../../img/{{ good.pic }}" alt="good.name">#}
+{#        <p>{{ good.price }}</p>#}
+{#        <a href="?addGood={{ good.id }}"><button class="button-to-buy">Купить</button></a></ф>#}
+{#    </div>#}
+
+{% endblock %}

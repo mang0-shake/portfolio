@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<div class="container">
+    <header class="main-header">
+        <div class="navigation">
+            <a href="/" class="logo">BookShooop</a>
+            <nav>
+                <a href="/" class="shop nav-items">Home</a>
+                <a href="/catalog" class="contacts nav-items">Shop</a>
+                <a href="/basket" class="cart">
+                    <!--                {% if  _basket.count != 0 %}-->
+                    <!--                <span id="sticker" class="sticker">{{ _basket.count }}</span>-->
+                    <!--                {% endif %}-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 18 24">
+                        <path fill="#fff"
+                              d="M17.994 5.997v14.998a3 3 0 0 1-2.999 3H3.002a3 3 0 0 1-2.999-3V5.997A2.999 2.999 0 0 1 3.002 3H4.5c0-1.657 2.013-3 4.498-3 2.484 0 4.497 1.343 4.497 3h1.5a2.999 2.999 0 0 1 2.998 2.998zM6 3h5.997c0-1.037-1.342-1.5-2.998-1.5-1.656 0-2.999.463-2.999 1.5zm10.495 16.496H1.502v1.5c0 .828.672 1.5 1.5 1.5h11.993a1.5 1.5 0 0 0 1.5-1.5zm0-13.498a1.5 1.5 0 0 0-1.5-1.5h-1.499v4.5h-1.499v-4.5H6v4.5H4.501v-4.5h-1.5a1.5 1.5 0 0 0-1.499 1.5v11.998h14.993z"/>
+                    </svg>
+                </a>
+                <a href="/user" class="user">
+                    <svg height="24px" viewBox="0 -32 512.016 512" width="21px" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#fff"
+                              d="m192 213.339844c-58.816406 0-106.667969-47.847656-106.667969-106.664063 0-58.816406 47.851563-106.6679685 106.667969-106.6679685s106.667969 47.8515625 106.667969 106.6679685c0 58.816407-47.851563 106.664063-106.667969 106.664063zm0-181.332032c-41.171875 0-74.667969 33.492188-74.667969 74.667969 0 41.171875 33.496094 74.664063 74.667969 74.664063s74.667969-33.492188 74.667969-74.664063c0-41.175781-33.496094-74.667969-74.667969-74.667969zm0 0"/>
+                        <path fill="#fff"
+                              d="m368 448.007812h-352c-8.832031 0-16-7.167968-16-16v-74.667968c0-55.871094 45.460938-101.332032 101.332031-101.332032h181.335938c55.871093 0 101.332031 45.460938 101.332031 101.332032v74.667968c0 8.832032-7.167969 16-16 16zm-336-32h320v-58.667968c0-38.226563-31.105469-69.332032-69.332031-69.332032h-181.335938c-38.226562 0-69.332031 31.105469-69.332031 69.332032zm0 0"/>
+                        <path fill="#fff"
+                              d="m496 218.675781h-181.332031c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h181.332031c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                        <path fill="#fff"
+                              d="m410.667969 304.007812c-4.097657 0-8.191407-1.558593-11.308594-4.691406-6.25-6.253906-6.25-16.386718 0-22.636718l74.027344-74.027344-74.027344-74.027344c-6.25-6.25-6.25-16.382812 0-22.632812s16.382813-6.25 22.636719 0l85.332031 85.332031c6.25 6.25 6.25 16.386719 0 22.636719l-85.332031 85.332031c-3.136719 3.15625-7.234375 4.714843-11.328125 4.714843zm0 0"/>
+                    </svg>
+                </a>
+            </nav>
+        </div>
+        <div class="header-infoblock">
+            <span class="infoblock-title">Welcome to BookShooop</span>
+            <p class="infoblock-text">Your Favourite Creative Agency Template</p>
+            <a href="/catalog" class="infoblock-button button">Go shopping</a>
+        </div>
+    </header>
+    <main>
+        <section class="reviews">
+            <div class="review-companies-wrp">
+                <a href="#" class="review-company"><img src="public/img/review_company_logo1.png" alt="company-logo1"
+                                                        class="company-1"></a>
+                <a href="#" class="review-company"><img src="public/img/review_company_logo2.png" alt="company-logo2"
+                                                        class="company-2"></a>
+                <a href="#" class="review-company"><img src="public/img/review_company_logo3.png" alt="company-logo3"
+                                                        class="company-3"></a>
+                <a href="#" class="review-company"><img src="public/img/review_company_logo4.png" alt="company-logo4"
+                                                        class="company-4"></a>
+                <a href="#" class="review-company"><img src="public/img/review_company_logo5.png" alt="company-logo5"
+                                                        class="company-5"></a>
+            </div>
+            <div class="review-wrp">
+                <i class="review-text">Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor
+                    repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum”</i>
+                <span class="review-author">Will Smith, Google Inc.</span>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <h1 class="contacts-title title">Contacts</h1>
+            <div class="underline"></div>
+            <div class="contacts-wrp">
+                <div class="contact-info-wrp">
+                    <div class="address contact-info-item">
+                        <h2 class="address-title cont-info-item-title">Address</h2>
+                        <p class="cont-info-item-text">312, 7th Ave, New York
+                            NY 101200, United States of America</p>
+                    </div>
+                    <div class="number contact-info-item">
+                        <h2 class="number-title cont-info-item-title">Hotline (24x7)</h2>
+                        <p class="cont-info-item-text"><span>+65 0052 300, </span><span>+65 88251 210, </span>
+                            <span>+88 01723 511 340</span>
+                        </p>
+                    </div>
+                    <div class="email contact-info-item">
+                        <h2 class="email-title cont-info-item-title">E-mail</h2>
+                        <p class="cont-info-item-text">shapedtheme@gmail.com
+                            khalilkode@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <form class="contacts-inputs" action="" method="post">
+                    <input type="text" class="contact-inputs-name contact-input" placeholder="Your name">
+                    <input type="email" class="contact-inputs-email contact-input" placeholder="Your E-mail">
+                    <input type="text" class="contact-inputs-subject contact-input" placeholder="Your subject">
+                    <input type="text" class="contact-inputs-company-name contact-input" placeholder="Company name">
+                    <textarea class="contact-inputs-message contact-input" placeholder="Write your message"></textarea>
+                    <input type="submit" class="contact-inputs-button-send" value="Send message">
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://twitter.com" class="sprite sp1"></a>
+        <a href="https://linkedin.com" class="sprite sp2"></a>
+        <a href="https://google.com" class="sprite sp3"></a>
+        <a href="https:/fb.com/" class="sprite sp4"></a>
+        <div class="underline-footer"></div>
+        <p class="copyright">&copy; 2015 Startup, Designed by SvetlanaKhan</p>
+    </footer>
+</div>
+</body>
+</html>

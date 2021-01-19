@@ -1,0 +1,18 @@
+{% extends 'layout.twig' %}
+{% block title %}Catalog{% endblock %}
+{% block content %}
+    <div class='products-wrp'>
+    {% for item in goods %}
+        <div class='product' id='product-{{ item.id }}'>
+            <a class='product-a' href='index.php?path=shop/good/{{ item.id }}'>
+                <img src='img/{{ item.pic }}' alt='{{ item.name }}' class='product-img'>
+                <span class='product-title' id='title-{{ item.id }}'>{{ item.name }}</span>
+                <span class='product-price' id='price-{{ item.id }}'>{{ item.price }} руб.</span>
+            </a>
+            <a href='index.php?path=shop/good/{{ item.id }}' style="text-decoration: none">
+                <button class='poduct-button' id='button-{{ item.id }}'>Подробнее >></button>
+            </a>
+            <button class='button-to-buy' onclick='to_bag({{ item.id }},{{ item.price }})'>Купить</button>
+        </div>    {% endfor %}
+    </div>
+{% endblock %}

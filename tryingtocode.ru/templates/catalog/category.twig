@@ -1,0 +1,47 @@
+{% extends 'layout.twig' %}
+{% block title %} Catalog/Category {% endblock %}
+{% block content %}
+{#    #}
+    <div class="breadcrumbs">
+        <a href="/catalog" class="breadcrumb">Shop</a> / <span class="breadcrumb-cur">{{ category.title }}</span>
+    </div>
+    <section>
+        <h1 class="all-products-title title">All of Prose</h1>
+        <div class="underline"></div>
+        <div class="all-products">
+            {% for item in goods %}
+            <a href="/catalog/{{ category.id  }}/{{ item.id }}" class="product-card-link">
+                <div class="product-card" id='product-{{ item.id }}'>
+                <img src="../public/img/{{ item.pic }}" alt="{{ item.name }}" class="product-card-img img-id">
+                <p class="product-card-author">{{ item.author }}</p>
+                <span class="product-card-title">{{ item.book_name }}</span>
+            </a>
+                <span class="product-card-price">{{ item.price }} rub</span>
+{#                <a href="?addGood={{ item.id }}">#}
+                    <button class="product-card-buy-button colored-button" onclick="add({{ item.id }}, {{ item.price }})">Buy</button>
+{#                </a>#}
+            </div>
+          
+            {% endfor %}
+        </div>
+    </section>
+{#    #}
+{#    <a href="/catalog">Каталог</a> / {{ category.title }}#}
+
+{#    <a href="/catalog/{{ category.id }}/{{ good.id }}">{{ good.name }}</a>#}
+{#        <div class='products-wrp'>#}
+{#            {% for item in goods %}#}
+{#                <div class='product' id='product-{{ item.id }}'>#}
+{#                    <a class='product-a' href='/catalog/{{ category.id  }}/{{ item.id }}'>#}
+{#                        <img src='../public/img/{{ item.pic }}' alt='{{ item.name }}' class='product-img'>#}
+{#                        <span class='product-title' id='title-{{ item.id }}'>{{ item.name }}</span>#}
+{#                        <span class='product-price' id='price-{{ item.id }}'>{{ item.price }} руб.</span>#}
+{#                    </a>#}
+{#                    <a href='/catalog/{{ category.id  }}/{{ item.id }}' style="text-decoration: none">#}
+{#                        <button class='poduct-button' id='button-{{ item.id }}'>Подробнее >></button>#}
+{#                    </a>#}
+{#                    <a href="?addGood={{ item.id }}"><button class='button-to-buy'>Купить</button></a>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{% endblock %}

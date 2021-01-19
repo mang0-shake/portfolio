@@ -1,0 +1,33 @@
+{% extends 'layout.twig' %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+    <section class="orders-section">
+        <h1 class="basket-title title">Admin</h1>
+        <div class="underline"></div>
+        {% for order in orders %}
+        <div class="order-wrp">
+            <h3 class="order-title">Заказ #{{ order.order_id }}</h3>
+            <p class="order-date">от {{ order.date }}</p>
+            <p>{{ order.login }}</p>
+            {% for good in order.goods %}
+            <div>
+                <span>{{ good.name }}</span><span> {{ good.count }} x {{ good.price }} = {{ good.sum }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </section>
+
+{#    {% for order in orders %}#}
+{#        <div style="border: 1px solid black">#}
+{#            <h3>Заказ #{{ order.order_id }}</h3>#}
+{#            <p>от {{ order.date }}</p>#}
+{#            <div>#}
+{#                {% for good in order.goods %}#}
+{#                    {{ good.name }} / {{ good.price }} x {{ good.count }}<br>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#            #}{# {% endfor %} #}
+{#        </div>#}
+{#    {% endfor %}#}
+{% endblock %}

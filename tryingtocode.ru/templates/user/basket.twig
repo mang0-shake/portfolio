@@ -1,0 +1,53 @@
+{% extends 'layout.twig' %}
+{% block title %}Basket{% endblock %}
+{% block content %}
+    {# {% for item in basket %} #}
+    {# {{ item }} #}
+    {# {% endfor %} #}
+    <section class="basket">
+        <h1 class="basket-title title">Cart</h1>
+        <div class="underline"></div>
+        {% for item in goods %}
+            <div id="basket-item-{{ item.id }}" class='basket-wrp'>
+                <a href="catalog/{{ item.category_id }}/{{ item.id }}">
+                    <img src="../../public/img/{{ item.pic }}" alt='{{ item.pic }}' class='basket-img'>
+                </a>
+                <div class="basket-product-titles">
+                    <span class="product-basket-title">{{ item.book_name }}</span>
+                    <span id='#' class='product-basket-author'>{{ item.author }}</span>
+                </div>
+                <div class="basket-product-count-and-price">
+                    <div class="basket-counter">
+                        <button id="button-remove-{{ item.id }}" class='basket-button' onclick='remove({{ item.id }},{{ item.price }})'>-</button>
+                        <span id='count-of-item-{{ item.id }}' class='basket-countOfItem'>{{ item.count }}</span>
+                        <button id='button-add-{{ item.id }}' class='basket-button' onclick='add({{ item.id }},{{ item.price }}, "basket")'>+
+                        </button>
+                    </div>
+                    <div class="basket-price-wrp">
+                        <span id='basket-total-product-price-{{ item.id }}' class='basket-total-product-price'>{{ item.sum }}</span><span> rub</span>
+                        <span class="basket-price">{{ item.price }} rub x <span
+                                    id="product-count-{{ item.id }}" class="product-count">{{ item.count }}</span></span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% if goods|length %}
+            <div class='basket-amount'>Итого: <span class="basket-total-price">{{ sum }}</span> rub</div>
+            <a href="/order" class='order-button-wrp'>
+                <button class="basket-order-button button">Оформить заказ</button>
+            </a>
+        {% else %}
+            <p>Корзина пуста</p>
+        {% endif %}
+    </section>
+    {# {% for item in goods %} #}
+    {# <div> #}
+    {# <p>{{ item.name }}</p> #}
+    {# <a href="/catalog/{{ item.category_id }}/{{ item.id }}"><img src="../../img/{{ item.pic }}" style="width:200px; " alt="{{ item.name }}"></a> #}
+    {# <p>{{ item.price }} руб.</p> #}
+    {# <p>{{ item.count }}шт.</p> #}
+    {# <p>{{ item.sum }} руб.</p> #}
+    {# </div> #}
+    {# <hr> #}
+    {# {% endfor %} #}
+{% endblock %}

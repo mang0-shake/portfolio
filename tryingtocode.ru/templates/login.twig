@@ -1,0 +1,28 @@
+{% extends 'layout.twig' %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <div class="login-window">
+        <h1 class="login-title title">Log in</h1>
+        {{ loginError }}
+        <div class="login-inputs">
+            <form method="post" action="#">
+            <input type="text" class="login-email input-style" name="login" placeholder="login" required>
+            <input type="password" class="login-pass input-style" name="pass" placeholder="password" required>
+            <input type="submit" class="login-button input-style colored-button" value="Log in">
+            </form>
+            <a href="auth" class="login-to-auth">Authorization</a>
+        </div>
+    </div>
+
+    {#    <h1>Login</h1>#}
+    {#    {{ loginError }}#}
+    {#    <form method="post" action="#">#}
+    {#        <p>Login</p>#}
+    {#        <input type="text" name="login" required>#}
+    {#        <p>Password</p>#}
+    {#        <input type="text" name="pass" required>#}
+    {#        <input type="submit">#}
+    {#    </form>#}
+    {#    <br>#}
+    {#    <a href="auth">Sign up</a>#}
+{% endblock %}
