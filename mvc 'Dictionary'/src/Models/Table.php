@@ -29,7 +29,7 @@ class Table
     public static function addColumn($col_name)
     {
         return App::instsnce()->getDB()->getLink()
-            ->exec("ALTER TABLE `glossary_table` ADD `$col_name` VARCHAR (5000) NOT NULL");
+            ->exec("ALTER TABLE `glossary_table` ADD `$col_name` TEXT (5000) NOT NULL");
     }
 
     public static function deleteColumn($col_name)
@@ -41,7 +41,7 @@ class Table
     public static function editColumn($oldName, $name)
     {
         return App::instsnce()->getDB()->getLink()
-            ->exec("ALTER TABLE `glossary_table` CHANGE `$oldName` `$name` VARCHAR(5000)");
+            ->exec("ALTER TABLE `glossary_table` CHANGE `$oldName` `$name` TEXT(5000)");
     }
 
     public static function deleteTerm($name)
@@ -68,6 +68,4 @@ class Table
         return App::instsnce()->getDB()->getLink()
             ->exec("INSERT INTO `glossary_table` ($names) VALUES ($values)");
     }
-
-
 }
