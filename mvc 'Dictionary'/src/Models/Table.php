@@ -68,6 +68,4 @@ class Table
         return App::instsnce()->getDB()->getLink()
             ->exec("INSERT INTO `glossary_table` ($names) VALUES ($values)");
     }
-
-
 }
