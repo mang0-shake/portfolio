@@ -24,7 +24,6 @@ function modal(buttonID, modalWrp, buttonType) {
                 if (selectedItem) {
                     let nameToChange = selectedItem.getAttribute("data-cell-id");
                     document.querySelector("#newColumnName").value = nameToChange.replace(/_/g," ")
-                    // document.querySelector("#currentName").innerHTML = nameToChange;
                     modalBox.style.display = "block";
                 } else showAnnouncement("You did not select a column", "red");
                 window.onclick = function (event) {
@@ -84,10 +83,6 @@ function modal(buttonID, modalWrp, buttonType) {
                 }
             }
             break;
-        // default:
-        //     btn.onclick = function () {
-        //         modalBox.style.display = "block";
-        //     }
     }
 }
 
@@ -223,7 +218,6 @@ function deleteColumn() {
     if (!selectedColumn) {
         showAnnouncement("You did not select a column", "red")
     } else {
-        // let col_name = selectedColumn.getAttribute("data-cell-id");
         let col_name = {
             name: selectedColumn.getAttribute("data-cell-id")
         }
