@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+{# ANNOUNCEMENTS #}
+<div class="announcement-wrp"></div>
+<h1>Term Manager</h1>
+{# CONTROL PANEL #}
+<div class="control-panel">
+    <!-- Add term -->
+    <button class="btn2" id="add-term-button">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M43,30V18c0-2.2-1.8-4-4-4H9c-2.2,0-4,1.8-4,4v12c0,2.2,1.8,4,4,4h30C41.2,34,43,32.2,43,30z M9,18h30v12 L9,30V18z"/>
+            <circle fill="#43A047" cx="38" cy="38" r="10"/>
+            <g fill="#fff">
+                <rect x="32" y="36" width="12" height="4"/>
+                <rect x="36" y="32" width="4" height="12"/>
+            </g>
+        </svg>
+    </button>
+    <!-- Edit term -->
+    <button class="btn2" id="edit-term-button">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M43,30V18c0-2.2-1.8-4-4-4H9c-2.2,0-4,1.8-4,4v12c0,2.2,1.8,4,4,4h30C41.2,34,43,32.2,43,30z M9,18h30v12 L9,30V18z"/>
+            <svg id="i-edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#ED8A19" stroke="#000"
+                 stroke-linecap="round" stroke-linejoin="round" stroke-width="1" x="15" y="-1"
+            >
+                <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+            </svg>
+        </svg>
+    </button>
+    <!-- Delete term -->
+    <button class="btn2" id="delete-term-button" onclick="deleteTerm()">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M43,30V18c0-2.2-1.8-4-4-4H9c-2.2,0-4,1.8-4,4v12c0,2.2,1.8,4,4,4h30C41.2,34,43,32.2,43,30z M9,18h30v12 L9,30V18z"/>
+            <circle fill="#F44336" cx="38" cy="38" r="10"/>
+            <g fill="#fff">
+                <rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"/>
+                <rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"/>
+            </g>
+        </svg>
+    </button>
+    <!-- Add column -->
+    <button class="btn2" id="add-column-button">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M30,5H18c-2.2,0-4,1.8-4,4v30c0,2.2,1.8,4,4,4h12c2.2,0,4-1.8,4-4V9C34,6.8,32.2,5,30,5z M18,39V9h12l0,30 H18z"/>
+            <circle fill="#43A047" cx="38" cy="38" r="10"/>
+            <g fill="#fff">
+                <rect x="36" y="32" width="4" height="12"/>
+                <rect x="32" y="36" width="12" height="4"/>
+            </g>
+        </svg>
+    </button>
+    <!-- Edit column -->
+    <button class="btn2" id="edit-column-button">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M30,5H18c-2.2,0-4,1.8-4,4v30c0,2.2,1.8,4,4,4h12c2.2,0,4-1.8,4-4V9C34,6.8,32.2,5,30,5z M18,39V9h12l0,30 H18z"></path>
+            <svg id="i-edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#ED8A19" stroke="#000"
+                 stroke-linecap="round" stroke-linejoin="round" stroke-width="1" x="17" y="6"
+            >
+                <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+            </svg>
+        </svg>
+    </button>
+    <!-- Delete column -->
+    <button class="btn2" id="delete-column-button" onclick="deleteColumn()">
+        <svg version="1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" enable-background="new 0 0 48 48"
+             width="24px">
+            <path fill="#90CAF9"
+                  d="M30,5H18c-2.2,0-4,1.8-4,4v30c0,2.2,1.8,4,4,4h12c2.2,0,4-1.8,4-4V9C34,6.8,32.2,5,30,5z M18,39V9h12l0,30 H18z"/>
+            <circle fill="#F44336" cx="38" cy="38" r="10"/>
+            <g fill="#fff">
+                <rect x="36.5" y="32" transform="matrix(-.707 .707 -.707 -.707 91.74 38)" width="3" height="12"/>
+                <rect x="36.5" y="32" transform="matrix(-.707 -.707 .707 -.707 38 91.74)" width="3" height="12"/>
+            </g>
+        </svg>
+    </button>
+</div>
+
+{# TABLE #}
+<div class="table-wrapper">
+    <table class="term-grid">
+        <thead>
+        <tr id="main_row">
+            {% for item in headers %}
+                {% set twig_content_variable= item %}
+                {% set replace_value_var= "_" %}
+                {% set replace_with_value_var = ' ' %}
+                <th data-cell-id="{{ item }}">
+                    {{ twig_content_variable|replace({ (replace_value_var): replace_with_value_var }) }}
+                </th>
+            {% endfor %}
+        </tr>
+        </thead>
+
+
+        <tbody>
+        {% for item in table %}
+            <tr id="{{ item.id }}" class="table_row">
+                {% for key, cell in item %}
+                    {% if key != "id" %}
+                        <td data-cell-id="{{ key }}">{{ cell }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{# DIALOG BOX - Add column #}
+<div class="dialogbox-background" id="addColumn">
+    <div class="dialogbox-container">
+        <div class="dialogbox-header">
+            <span class="title">Add column</span>
+            <span class="close" onclick="close_dialog_box('addColumn')">&times;</span>
+        </div>
+        <div class="dialogbox-body">
+            <label for="column-name" class="inp">
+                <input type="text" id="column-name" placeholder=" ">
+                <span class="label">Column name</span>
+                <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="dialogbox-footer">
+            <button class="btn" onclick="add_col()">Add</button>
+            <button class="btn" onclick="close_dialog_box('addColumn')">Close</button>
+        </div>
+    </div>
+</div>
+
+{# DIALOG BOX - Edit column #}
+<div class="dialogbox-background" id="modal_editCol">
+    <div class="dialogbox-container">
+        <div class="dialogbox-header">
+            <span class="title">Edit column</span>
+            <span class="close" onclick="close_dialog_box('modal_editCol')">&times;</span>
+        </div>
+        <div class="dialogbox-body">
+            <label for="column-name" class="inp">
+                <input type="text" id="newColumnName" placeholder=" ">
+                <span class="label" id="currentName">Column name</span>
+                <span class="focus-bg"></span>
+            </label>
+        </div>
+        <div class="dialogbox-footer">
+            <button class="btn" onclick="editColumnName()">Apply</button>
+            <button class="btn" onclick="close_dialog_box('modal_editCol')">Close</button>
+        </div>
+    </div>
+</div>
+
+{# DIALOG BOX - Add term #}
+<div class="dialogbox-background" id="modal_addTerm">
+    <div class="dialogbox-container">
+        <div class="dialogbox-header">
+            <span class="title">Add Term</span>
+            <span class="close" onclick="close_dialog_box('modal_addTerm')">&times;</span>
+        </div>
+        <div id="addTermWrp" class="dialogbox-body">
+
+        </div>
+        <div class="dialogbox-footer">
+            <button class="btn" onclick="addTerm()">Add</button>
+            <button class="btn" onclick="close_dialog_box('modal_addTerm')">Close</button>
+        </div>
+    </div>
+</div>
+
+{# DIALOG BOX - Edit term #}
+<div class="dialogbox-background" id="modal_editRow">
+    <div class="dialogbox-container">
+        <div class="dialogbox-header">
+            <span class="title">Edit term</span>
+            <span class="close" onclick="close_dialog_box('modal_editRow')">&times;</span>
+        </div>
+        <div id="editTermWrp" class="dialogbox-body">
+
+        </div>
+        <div class="dialogbox-footer">
+            <button class="btn" onclick="editTerm()">Apply</button>
+            <button class="btn" onclick="close_dialog_box('modal_editRow')">Close</button>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="js/script.js"></script>
+</html>
+

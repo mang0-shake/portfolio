@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    background: #B6E5D8;
+    font-family: Poppins;
+    color: #747474;
+    font-size: 12px;
+}
+
+.control-panel {
+    height: 40px;
+    width: 240px;
+    background: #E3E8E9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+/*CONTROL PANEL*/
+.control-panel button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.control-panel button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btn2 {
+    border: none;
+    width: 40px;
+    height: 40px;
+    outline: none;
+}
+
+.btn2:hover {
+    background-color: grey;
+}
+
+/*CONTROL PANEL*/
+
+/*ANNOUNCEMENT*/
+.announcement-wrp {
+    position: fixed;
+    font-weight: bold;
+    color: #555555;
+    top: 0;
+    right: 6px;
+    z-index: 1000;
+}
+
+
+.announcement {
+    text-align: center;
+    width: 250px;
+    background-color: #ffffff;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    color: black;
+}
+
+.announcement-wrp .red {
+    background-color: #ff6961;
+}
+
+.announcement-wrp .green {
+    background-color: white;
+}
+
+/*ANNOUNCEMENT*/
+
+/*TABLE*/
+.table-wrapper {
+    border-radius: 10px;
+    width: 1000px;
+    overflow: hidden;
+}
+
+.term-grid {
+    width: 100%;
+    overflow-wrap: break-word;
+    border-collapse: collapse;
+}
+
+.term-grid th {
+    color: #4f4f4f;
+    background-color: #b1d4e0;
+}
+
+.term-grid th,
+.term-grid td {
+    text-align: left;
+    padding: 10px 0 10px 15px;
+    cursor: default;
+}
+
+.term-grid td {
+    color: #4f4f4f;
+    background-color: #ffffff;
+}
+
+.term-grid tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.term-grid tr:last-child {
+    border-bottom: 0px solid #f2f2f2;
+}
+
+.term-grid tr.selected-term td {
+    background-color: #E3E8E9;
+}
+
+.term-grid td.selected-column {
+    background-color: #E3E8E9;
+}
+
+/*TABLE*/
+
+/*DIALOGBOX*/
+.dialogbox-background {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialogbox-container {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    max-height: 800px;
+    overflow: auto;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 16px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.dialogbox-body {
+    margin-top: 20px;
+}
+
+/* Input text style */
+.dialogbox-body * {
+    box-sizing: border-box;
+}
+
+.dialogbox-body .inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.dialogbox-body .inp .label {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.dialogbox-body .inp .focus-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.dialogbox-body .inp input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 16px 12px 5px 12px;
+    height: 46px;
+    font-size: 12px;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+    color: #000;
+    transition: all 0.15s ease;
+    margin-bottom: 20px;
+}
+
+.dialogbox-body .inp:last-child input {
+    margin-bottom: 18px;
+}
+
+.dialogbox-body .inp input:hover {
+    background: rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dialogbox-body .inp input:not(:-moz-placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -9px, 0) scale(0.85);
+}
+
+.dialogbox-body .inp input:not(:-ms-input-placeholder) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -9px, 0) scale(0.85);
+}
+
+.dialogbox-body .inp input:not(:placeholder-shown) + .label {
+    color: rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, -9px, 0) scale(0.85);
+}
+
+.dialogbox-body .inp input:focus {
+    background: rgba(0, 0, 0, 0.05);
+    outline: none;
+    box-shadow: inset 0 -2px 0 #0077FF;
+}
+
+.dialogbox-body .inp input:focus + .label {
+    color: #0077FF;
+    transform: translate3d(0, -9px, 0) scale(0.85);
+}
+
+.dialogbox-body .inp input:focus + .label + .focus-bg {
+    transform: scaleX(1);
+    transition: all 0.1s ease;
+}
+
+.dialogbox-footer {
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #b1d4e0; /* Green */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: inherit;
+    outline: none;
+    margin-right: 10px;
+}
+
+/*DIALOGBOX*/

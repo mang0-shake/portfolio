@@ -1,0 +1,13 @@
+{% for item in headers %}
+    {% set twig_content_variable= item %}
+    {% set replace_value_var= "_" %}
+    {% set replace_with_value_var = ' ' %}
+
+    <div>
+        <label for="column-name" class="inp">
+            <input type="text" class="inputAddTerm" id="term-{{ item }}" placeholder=" ">
+            <span class="label"> {{ twig_content_variable|replace({ (replace_value_var): replace_with_value_var }) }}</span>
+            <span class="focus-bg"></span>
+        </label>
+    </div>
+{% endfor %}
