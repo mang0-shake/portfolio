@@ -12,10 +12,10 @@ class App
 
     public static function instsnce()
     {
-        if(self::$instance === null){
+        if (self::$instance === null) {
             self::$instance = new self();
         }
-            return self::$instance;
+        return self::$instance;
     }
 
     public function getConfig()
@@ -33,10 +33,9 @@ class App
         return $this->db;
     }
 
-    public function run(){
+    public function run()
+    {
         $this->db = new DB($this->config['db']);
-
-
         [$uri] = explode('?', $_SERVER['REQUEST_URI']);
         [$controllerName, $actionName, $param] = explode('/', trim($uri, '/'));
 

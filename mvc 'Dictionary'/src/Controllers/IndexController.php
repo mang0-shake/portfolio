@@ -1,8 +1,6 @@
 <?php
 
-
 namespace MyApp\Controllers;
-
 
 use MyApp\App;
 use MyApp\Models\Table;
@@ -72,7 +70,6 @@ class IndexController extends Controller
             $term = Table::getTerm($data['id']);
             $this->renderTemplate("editTermDialogBox.twig", [
                 "term" => $term,
-//                "id" => $data['id']
             ]);
         } catch (\PDOException $Exception) {
             http_response_code(501);
@@ -95,7 +92,6 @@ class IndexController extends Controller
     public function actionMakeAddTerm()
     {
         try {
-//            $data = json_decode(file_get_contents('php://input'), true);
             $headers = Table::getHeaders();
             $this->renderTemplate("addTermDialogBox.twig", [
                 "headers" => $headers
